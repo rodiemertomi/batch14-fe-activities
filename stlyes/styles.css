@@ -1,0 +1,211 @@
+html, body{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+html{
+    scroll-behavior: smooth;
+}
+section{
+    height: 100vh;
+    display: flex;
+}
+#projects{
+    height: auto;
+}
+section:last-child{
+    height: 100px;
+    display: flex;
+}
+section:nth-child(odd){
+    background: #ccc;
+}
+section:nth-child(even){
+    background: #282828;
+}
+
+/*----------------NAVBAR----------------*/
+#navbar-ul{
+    width: 100%;
+    height: 60px;
+    background: #282828;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: right;
+    gap: 50px;
+    position: fixed;
+}
+#navbar-ul li{
+    padding: 25px 25px;
+    list-style: none;
+}
+#navbar-ul li a{
+    color: #fff;
+    font-size: 18px;
+    text-decoration: none;
+}
+
+/*----------------HOME----------------*/
+#home-div{
+    text-shadow: 2px 2px #b3b3b3;
+    margin-top: 60px;
+    display: flex;
+    flex-direction: row;
+}
+#home-text-div{
+    flex: 2;
+    letter-spacing: 8px;
+    color: #fff;
+}
+#home-text-div h1{
+    width: 50%;
+    background: #282828;
+    position: relative;
+    margin: 400px 0 0 25%;
+    padding: 0;
+    font-size: 60px;
+    animation: text 2s;
+}
+#home-text-div h2{
+    margin: 0 0 0 25%;
+    padding: 0;
+    font-size: 45px;
+}
+@keyframes text {
+    0%{
+        margin-bottom: -60px;
+    }
+    80%{
+        margin-bottom: -60px;
+    }
+}
+#home-img-div{
+    flex: 2;
+}
+#home-img-div img{
+    border: 25px groove #b3b3b3;
+    margin-top: 250px;
+    width: 50%;
+    height: auto;
+    border-radius: 50%;
+}
+
+/*----------------ABOUT----------------*/
+#about-div{
+    text-shadow: 2px 2px #b3b3b3;
+    margin-top: 60px;
+    gap: 10px;
+    display: flex;
+    flex-flow: row wrap;
+}
+#about-text{
+    flex: 2;
+}
+#about-text h1{
+    margin-top: 25%;
+    margin-left: 10%;
+    font-size: 60px;
+}
+#about-text h3{
+    margin-left: 10%;
+    word-wrap: inherit;
+    font-size: 30px;
+}
+#about-schools{
+    align-items: center;
+    flex: 1;
+}
+#about-pamma h3{
+    text-align: center;
+}
+#about-pamma img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 75%;
+    border-radius: 2%;
+}
+#about-sti h3{
+    margin-top: 30px;
+    text-align: center;
+}
+#about-sti img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 75%;
+    border-radius: 2%;
+}
+
+/*----------------PROJECTS----------------*/
+#projects-div{
+    text-align: center;
+    margin-top: 60px;
+    height: auto;
+}
+#projects-div span{
+    width: 100%;
+    font-size: 60px;
+    font-weight: 700;
+    color: #fff;
+    text-shadow: 2px 2px #ccc;
+}
+#projects ul{
+    display: flex;
+    flex-wrap: wrap;
+}
+#projects li{
+    list-style: none;
+    height: 40vh;
+    flex-grow: 1;
+    margin: 2vmin;
+}
+#projects img{
+    border: 1px solid #fff;
+    max-height: 100%;
+    max-width: 100%;
+    object-fit: cover;
+    vertical-align: bottom;
+    border-radius: 1vmin;
+}
+@media (max-aspect-ratio: 1/1){
+    li {
+        height: 30vh;
+    }
+}
+@media (max-height: 480px){
+    li {
+        height: 80vh;
+    }
+}
+@media (max-aspect-ratio: 1/1) and (max-width: 480px){
+    ul {
+        flex-direction: row;
+    }
+    li {
+        height: auto;
+        width: 100%;
+    }
+    img {
+        width: 100%;
+        max-height: 75vh;
+        min-width: 0;
+    }
+}
+
+/*----------------CONTACT----------------*/
+#contact-div{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    font-weight: bold;
+    font-size: 20px;
+    text-shadow: 2px 2px #b3b3b3;
+}
+.contact-texts ul{
+    flex: 1;
+}
+.contact-texts li{
+    list-style: none;
+}
