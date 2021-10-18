@@ -1,0 +1,40 @@
+$backgroundColor: #ededed
+$stiDivColor: #ebf702
+$formsColor: #01579b
+$boxShadow: 2px 2px 3px
+$borderBlue: 2px solid #01579B
+$borderYellow: 2px solid #cccc12
+$borderRadius: 25px
+$paddings: 10px 15px
+$margins: 8px 0
+$fontTitle: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif 
+$fontSubText: "Lucida Handwriting", cursive
+$roundImage: 50%
+
+body, html
+    margin: 0
+    padding: 0
+    background-color: $backgroundColor
+
+%container-styles
+    box-shadow: $boxShadow
+    border-radius: $borderRadius
+    width: 100%
+
+%text-input-styles
+    border: none
+    border-bottom: $borderYellow
+    padding: $paddings
+    margin: $margins
+    width: 100%
+    box-sizing: border-box
+
+%dropdown-styles
+    width: 49%
+    padding: $paddings
+
+%button-styles
+    float: right
+    padding: $paddings
+    border: none
+    border-radius: 10px

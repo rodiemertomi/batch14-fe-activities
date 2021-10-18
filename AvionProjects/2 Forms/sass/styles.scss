@@ -1,0 +1,125 @@
+@use 'stiTheme' as sti;
+
+@mixin defaultMargins{
+    margin: 0;
+    padding: 0;
+}
+
+@mixin flexCenter($direction) {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: $direction;
+}
+
+@mixin flexVanilla($direction){
+    display: flex;
+    flex-direction: $direction
+}
+
+@media all and (max-width: 1280px){
+    #main-container{
+        @include flexCenter(column)
+    }
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type=number] {
+    -moz-appearance:textfield;
+}
+
+
+#main-container{
+    @include flexVanilla(row);
+    margin-left: 25%;
+    margin-right: 25%;
+    margin-top: 10%;
+    gap: 10px;
+}
+#sti-div{
+    @extend %container-styles;
+    border: sti.$borderBlue;
+    background-color: sti.$stiDivColor;
+    #sti-img{
+        border-radius: sti.$roundImage;
+        border: sti.$borderBlue
+    }
+    #title, #description{
+        padding: 2%;
+    }
+}
+
+#survey-form{    
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-top: 20px;    
+    color: white;
+}
+
+#form-div{
+    @extend %container-styles;
+    border: sti.$borderYellow;
+    background-color: sti.$formsColor;
+    min-width: 50%;
+    #name-input{    
+        @extend %text-input-styles;
+    }
+    #email-input{    
+        @extend %text-input-styles;
+    }
+    
+    #text-input{    
+        @extend %text-input-styles;
+    }
+    
+    #age-input{    
+        @extend %text-input-styles;
+        width: 49%;
+    }
+    #branch-label{
+        float: right;
+        margin-right: 37%;
+    }
+    #text-area{
+        resize: none;
+        width: 99%;
+    }
+    #reset, #submit{
+        @extend %button-styles;
+    }
+    #submit{
+        background-color: sti.$stiDivColor;
+    }
+    
+    #reset{
+        background-color: sti.$formsColor;
+    }
+}
+
+#radio-checkbox-container{
+    @include flexVanilla(row);
+}
+
+#dropdown{
+    @extend %dropdown-styles;
+}
+select:invalid {color: grey;}
+select:valid {color: black;}
+
+#checkbox-div, #radio-div{
+    flex: 2;
+}
+
+h1{
+    @include defaultMargins();
+    font-family: sti.$fontTitle;
+}
+p{
+    @include defaultMargins();
+    font-family: sti.$fontSubText;
+}

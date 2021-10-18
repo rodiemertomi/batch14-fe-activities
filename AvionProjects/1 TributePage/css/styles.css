@@ -1,0 +1,123 @@
+body, html{
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    background-image: url("../img/outerspace.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+header{
+    width: 100%;
+    height: 70px;
+    background-color: #282828;
+}
+
+#main{
+    padding: 100px 100px;
+}
+
+#img-div{
+    float: left;
+    width: 26%;
+    height: auto;
+    margin: 0;
+}
+
+#info-div{
+    width: 70%;
+    margin: 0;
+    float: right;
+}
+
+#tribute-info{    
+    color: #ffffff;
+    font-family: 'Alfa Slab One', cursive;
+}
+
+#image{
+    background: rgba(0,0,0,0.25);
+    filter: brightness(75%);
+    width: 100%;
+    height: auto;
+    align-content: center;
+    border-radius: 25px;
+}
+
+#tribute-link{
+    color: #ffffff;
+    font-size: 15px;
+    text-decoration: none;
+}
+
+#navspan{
+    color: #ffffff;
+}
+
+#infospan{
+    color:#AA0000;
+}
+
+#paragraph-div{
+    background: rgba(0,0,0,0.35);
+    border-radius: 5px;
+
+}
+
+#navbarUL{
+    width: auto;
+    float: right;
+    margin-top: 8px;
+}
+
+.navLink{
+    text-align: center;
+    color: #ffffff;
+    text-decoration: none;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.2vw;
+}
+
+.navLink:hover{
+    color: #F0c330;
+    transition: 0.5s;
+    margin-top: -16px;
+}
+
+.paragraph{
+    color: #ffffff;
+    font-size: 1.2vw;
+    font-family: 'Open Sans', sans-serif;
+}
+
+h6{
+    color: #ffffff;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+h1{
+    position: absolute;
+    padding: 3px;
+    float: left;
+    margin-left: 2%;
+    margin-top: 10px;
+    font-family: 'Alfa Slab One', cursive;
+    color: #AA0000;
+}
+
+h3{
+    color: #ffffff;
+    font-family: 'Alfa Slab One', cursive;
+}
+
+li{
+    display: inline-block;
+    padding: 15px 30px;
+}
+
+a{
+    text-decoration: none;
+}

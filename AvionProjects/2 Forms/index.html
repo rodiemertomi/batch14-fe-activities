@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="newcss/styles.css">
+    <title>STI - Complaint/Feedback Form</title>
+</head>
+<body>
+    <div id="main-container">
+        <div id="sti-div">
+            <div>
+                <h1 id="title">Systems Technology Institute</h1>
+                <p id="description">Be Life-Ready. Be STI. <br> Education For Real Life</p>
+            </div>
+            <div id="img-div">
+                <img src="img/stiLogo.jpg" alt="Sti Logo" id="sti-img">
+            </div>
+        </div>
+        <div id="form-div">
+            <form action="" id="survey-form">
+                <label for="name" id="name-label">Name</label> <br>
+                <input type="text" name="name" placeholder="Enter your Name" id="name-input" required><br>
+                <label for="email" id="email-label">Email</label><br>
+                <input type="email" name="email" placeholder="Enter your Email" id="email-input" required><br>
+                <label for="number" id="number-label">Age</label> <label for="dropdown" id="branch-label">Branch</label> <br>
+                <input type="number" name="number" placeholder="8 and above" id="age-input" min="8" max="80">                           
+                <select name="" id="dropdown" required>
+                    <option value="" selected>-Select Branch-</option>
+                    <option value="global-city">Global City</option>
+                    <option value="alabang">Alabang</option>
+                    <option value="fairview">Fairview</option>
+                    <option value="cubao">Cubao</option>
+                </select><br>                
+                <div id="radio-checkbox-container">
+                    <div id="radio-div">
+                        <label for="radio" id="radio-label">Year</label> <br>
+                        <input type="radio" name="Year" value="year1">
+                        <label for="radio">First Year</label><br>
+                        <input type="radio" name="Year" value="year2">
+                        <label for="radio">Second Year</label><br>
+                        <input type="radio" name="Year" value="year3">
+                        <label for="radio">Third Year</label><br>
+                        <input type="radio" name="Year" value="year4">
+                        <label for="radio">Fourth Year</label><br>
+                    </div>
+                    <div id="checkbox-div">
+                        <label for="checkbox" id="checkbox-label">Complaints</label><br>
+                        <input type="checkbox" name="complaint1" value="Curriculum">
+                        <label for="checkbox">Curriculum</label><br>
+                        <input type="checkbox" name="complaint2" value="Facilities" >
+                        <label for="checkbox">Facilities</label><br>
+                        <input type="checkbox" name="complaint3" value="Professors">
+                        <label for="checkbox">Professors</label><br>
+                        <input type="checkbox" name="complaint4" value="Policies">
+                        <label for="checkbox">Policies</label><br>
+                        <input type="checkbox" name="complaint5" value="Uniforms">
+                        <label for="checkbox">Uniforms</label><br>
+                    </div>
+                </div>
+                <label for="text-area">Suggestions </label>
+                <textarea name="text-area" id="text-area" cols="30" rows="10" placeholder="Write your suggestions on how we can improve on your complaints."></textarea>
+                <input type="submit" id="submit">
+                <input type="reset" id="reset">
+            </form>
+        </div>
+    </div>
+    <footer>
+        <p>Created by: Rodiemer Tominez</p>
+        <a href="https://www.facebook.com/rodiemertomi" target="_blank">-Facebook-</a><br><a href="https://github.com/rodiemertomi" target="_blank">-Github-</a>
+    </footer>
+</body>
+</html>

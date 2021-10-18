@@ -1,0 +1,141 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  background-color: #ededed;
+}
+
+#sti-div, #form-div {
+  box-shadow: 2px 2px 3px;
+  border-radius: 25px;
+  width: 100%;
+}
+
+#form-div #name-input, #form-div #email-input, #form-div #text-input, #form-div #age-input {
+  border: none;
+  border-bottom: 2px solid #cccc12;
+  padding: 10px 15px;
+  margin: 8px 0;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+#dropdown {
+  width: 49%;
+  padding: 10px 15px;
+}
+
+#form-div #reset, #form-div #submit {
+  float: right;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 10px;
+}
+
+@media all and (max-width: 1280px) {
+  #main-container {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+#main-container {
+  display: flex;
+  flex-direction: row;
+  margin-left: 25%;
+  margin-right: 25%;
+  margin-top: 10%;
+  gap: 10px;
+}
+
+#sti-div {
+  border: 2px solid #01579B;
+  background-color: #ebf702;
+}
+#sti-div #sti-img {
+  border-radius: 50%;
+  border: 2px solid #01579B;
+}
+#sti-div #title, #sti-div #description {
+  padding: 2%;
+}
+
+#survey-form {
+  margin-left: 5px;
+  margin-right: 5px;
+  margin-top: 20px;
+  color: white;
+}
+
+#form-div {
+  border: 2px solid #cccc12;
+  background-color: #01579b;
+  min-width: 50%;
+}
+#form-div #age-input {
+  width: 49%;
+}
+#form-div #branch-label {
+  float: right;
+  margin-right: 37%;
+}
+#form-div #text-area {
+  resize: none;
+  width: 99%;
+}
+#form-div #submit {
+  background-color: #ebf702;
+}
+#form-div #reset {
+  background-color: #01579b;
+}
+
+#radio-checkbox-container {
+  display: flex;
+  flex-direction: row;
+}
+
+select:invalid {
+  color: grey;
+}
+
+select:valid {
+  color: black;
+}
+
+#checkbox-div, #radio-div {
+  flex: 2;
+}
+
+h1 {
+  margin: 0;
+  padding: 0;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+p {
+  margin: 0;
+  padding: 0;
+  font-family: "Lucida Handwriting", cursive;
+}
+
+footer{
+  text-align: center;
+  padding-top: 10px;
+}
+
+footer a{
+  text-decoration: none;
+  color: #01579B;
+}
+/*# sourceMappingURL=styles.css.map */

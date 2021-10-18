@@ -1,0 +1,144 @@
+body, html{
+    margin: 0;
+    padding: 0;
+    background-color: #ededed;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type=number] {
+    -moz-appearance:textfield;
+}
+
+#radio-checkbox-container{
+    display: flex;
+    flex-direction: row;
+}
+#title, #description{
+    padding: 2%;
+}
+
+#main-container{
+    display: flex;
+    flex-flow: row;
+    gap: 10px;
+    margin-left: 25%;
+    margin-right: 25%;
+    margin-top: 10%;
+}
+
+#sti-img{
+    width: auto;
+    size: auto;
+    height: auto;
+    border:2px #01579B solid;
+    border-radius: 50%;
+}
+
+#sti-div{
+    box-shadow: 2px 2px 3px;
+    width: 100%;
+    background-color: #ebf702;
+    border-radius: 25px;
+    border: 2px solid #01579B;
+}
+
+#form-div{
+    min-width: 50%;
+    box-shadow: 2px 2px 3px;
+    border: 2px solid #cccc12;
+    border-radius: 25px; 
+    width: 100%;
+    background-color: #01579B;
+}
+
+#survey-form{
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-top: 20px;
+    color: white;
+}
+
+#name-input, #email-input, #text-area{
+    border: none;
+    border-bottom: 2px solid #cccc12;
+    padding: 10px 15px;
+    margin: 8px 0;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+#age-input{
+    border: none;
+    border-bottom: 2px solid #cccc12;
+    padding: 10px 15px;
+    margin: 8px 0;
+    width: 49%;
+    box-sizing: border-box;
+}
+
+#dropdown{
+    width: 49%;
+    padding: 10px 15px;
+}
+
+#branch-label{
+    float: right;
+    margin-right: 37%;
+}
+
+#radio-div{
+    flex: 2;
+}
+
+#checkbox-div{
+    flex: 2;
+}
+
+#text-area{
+    resize: none;
+}
+
+#submit{
+    float: right;
+    border: none;
+    border-radius: 10px;
+    background-color: #cccc12;
+    padding: 10px 15px;
+}
+
+#reset{
+    float: right;
+    border: none;
+    background-color: #01579B;
+    padding: 10px 15px;
+}
+
+p, h1{
+    margin: 0;
+    padding: 0;
+}
+
+h1{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+p{
+    font-family: "Lucida Handwriting", cursive;
+}
+
+select:invalid {color: grey;}
+select:valid {color: black;}
+
+@media all and (max-width: 1280px){
+    #main-container{
+        display: flex;
+        direction: column;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+}
