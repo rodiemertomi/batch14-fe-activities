@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redragon</title>
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <i class="fas fa-shopping-cart"></i>
+    <header id="header">
+        <img src="https://res.cloudinary.com/tomitomi/image/upload/v1634387820/Redragon/RedragonLogo_lwqheu.png" alt="Redragon Logo">
+        <nav id="nav-bar">
+            <ul id="navbar-ul">
+                <li class="nav-link"><a href="#Keyboards">Keyboards</a></li>
+                <li class="nav-link"><a href="#Mouse">Mouse</a></li>
+                <li class="nav-link"><a href="#Headsets">Headsets</a></li>
+                <li class="nav-link"><a href="#Reviews">Reviews</a></li>
+            </ul>
+        </nav>
+        <li class="nav-link"> <a href="#Contact">Support</a> </li>
+    </header>
+    <main>        
+        <section id="Keyboards">
+            <div id="keyboard-image">
+                <img src="keyboards/redragonKala-PhotoRoom.png" alt="">
+            </div>
+            <div id="keyboard-specs">
+                <h1>Redragon KALA K557 RGB</h1>
+                <br>
+                <ul><span>Specifications: <br> <br></span></ul>
+                    <li>Connector: Gold-plated USB</li>
+                    <li>LED-backlit color: Choose between seven colors</li>
+                    <li>Keyboard Size: 17.2x6.78x1.5 inches</li>
+                    <li>Keyboard Weight: 2.8 pounds</li>
+                    <li>Multimedia Keys: 12</li>
+                    <li>Material: Aluminum alloy +ABS</li>
+                
+                <div class="buttons">
+                    <button class="order-now">Order Now</button>
+                    <button class="more">MORE>>></button>
+                </div>
+            </div>
+        </section>
+        <section id="Mouse">
+            <div id="mouse-specs">
+                <h1>Redragon M711 COBRA Gaming Mouse</h1>
+                <ul><span>Specifications: <br></span></ul>
+                    <li>Customize DPI Switch mode 1: 500 / 1000 / 2000 / 3000 / 5000 adjusted via the buttons on the mouse</li>
+                    <li>Customize DPI Switch mode 2: DPI can be adjusted freely by +-100 from 100 to 10000 via programming software</li>
+                    <li>Polling rate: Up to 1000Hz; switchable: 125HZ / 250HZ / 500HZ / 1000HZ (Default 500HZ)</li>
+                    <li>Buttons: 7 (7 out of 9) are customizable</li>
+                    <li>Tracking System: Optical</li>
+                    <li>Interface: USB 2.0 full speed. 3.0</li>
+                    <li>Size: 5.0 x 2.6 x 1.6 inches</li>
+                    <li>USB Length: 1.8M braided-fiber cable</li>
+                    <div class="buttons">
+                        <button class="order-now">Order Now</button>
+                        <button class="more">MORE>>></button>
+                    </div>
+            </div>
+            <div id="mouse-image">
+                <img src="mice/redragon_cobra.png" alt="">
+            </div>
+        </section>
+        <section id="Headsets">
+            <div id="headsets-img">
+                <img src="headsets/redragon_lamia2.png" alt="">
+            </div>
+            <div id="headsets-specs">
+                <h1>Redragon LAMIA 2 USB Virtual 7.1</h1>
+                <ul><span>Specifications: <br></span></ul>
+                    <li>7.1 Channel Virtual USB Surround Sound Gaming Headset</li>
+                    <li>3D sound effects via software</li>
+                    <li>RGB Backlighting</li>
+                    <li>40mm Drivers craete an immersive soundscape</li>
+                    <li>Flexible and high sensitive microphone design</li>
+                    <li>Large and comfy memory foam earpads</li>
+                    <li>Works with PC via USB port</li>
+                    <div class="buttons">
+                        <button class="order-now">Order Now</button>
+                        <button class="more">MORE>>></button>
+                    </div>
+            </div>
+        </section>
+        <section id="Reviews">
+            <div>
+                <video class="slider" src="videos/RedragonLamia2.mp4" autoplay loop muted controls>
+                </video>
+            </div>
+
+            <div>
+                <ul>
+                    <li onclick="videoslider('videos/RedragonLamia2.mp4')"><video src="videos/RedragonLamia2.mp4"></video></li>
+                    <li onclick="videoslider('videos/RedragonCobraM711.mp4')"><video src="videos/RedragonCobraM711.mp4"></video></li>
+                    <li onclick="videoslider('videos/RedragonKalaK557.mp4')"><video src="videos/RedragonKalaK557.mp4"></video></li>
+                </ul>
+            </div>
+        </section>
+        <section id="Contact">
+            <form action="" id="form">
+                <div class="labels">
+                    <label for="name">Name</label>
+                    <label for="phone">Phone Number *</label>
+                    <label for="country">Country *</label>
+                </div>
+                <div class="entries">
+                    <input class="entries" id="name" type="text" placeholder="Surname, Firstname, M.I.">
+                    <input class="entries" id="phone" type="number">
+                    <input class="entries" id="country" type="text">
+                </div>
+                <div class="labels">
+                    <label for="email">E-mail </label>
+                    <label for="product">Product Model No. / Name * </label>
+                </div>
+                <div class="entries">
+                    <input class="entries" id="email" type="email" placeholder="Please enter your e-mail">
+                    <input class="entries" id="product" type="text" placeholder="Ex: Redragon Lamia2">
+                </div>
+                <label for="textarea">Message</label>
+                <textarea id="textarea" name="textarea" class="entries" cols="30" rows="10" placeholder="Provide extra details to help us help you."></textarea>
+                <div id="submit-div">                    
+                    <input id="submit" type="submit">  <br>
+                    <footer>
+                        <p>Developed by: <a href="https://www.facebook.com/rodiemertomi" target="_blank">tomi</a> </p>
+                    </footer>                  
+                </div>
+            </form>
+        </section>
+
+        <script>
+
+            function videoslider(links){
+                document.querySelector(".slider").src = links;
+            }
+
+        </script>
+    </main>
+
+</body>
+</html>

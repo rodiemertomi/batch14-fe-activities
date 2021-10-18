@@ -1,0 +1,263 @@
+@use 'sass' as *
+//--------------Defaults--------------//
+*
+    margin: 0
+    padding: 0
+    box-sizing: border-box
+    font-family: 'Josefin Sans', sans-serif
+
+html
+    scroll-behavior: smooth
+
+body
+    display: flex
+    flex-direction: column
+    overflow: hidden
+
+//--------------Defaults-end--------------//
+
+//--------------Navbar--------------//
+#header
+    font-size: 2vmin
+    z-index: 999
+    display: flex
+    justify-content: space-around
+    height: 10vh
+    background-color: $dark
+    align-items: center
+    text-shadow: 0.05vmin 0.05vmin $red
+
+    img
+        transition: 0.3s ease-in-out
+        height: 8vmin
+
+    img:hover
+        height: 10vmin
+    
+    li
+        list-style: none
+
+    li a
+        padding: 2vmin
+        text-decoration: none
+        color: $white
+        transition: ease-in-out 0.3s
+
+    li a:hover
+        font-size: 3vmin
+        color: $red
+
+    nav ul
+        display: flex
+        justify-content: space-between
+        list-style: none
+    
+    nav ul li a
+        text-decoration: none
+        color: $white
+
+//--------------Navbar-end--------------//
+
+//--------------Layouts--------------//
+
+main
+    height: 90vh
+    overflow-y: scroll
+    scroll-behavior: smooth
+
+section
+    display: flex
+    height: 90vh
+    justify-content: center
+
+section:nth-child(odd)
+    background-image: linear-gradient($dark, $dark, $semidark, $red)
+
+section:nth-child(even)
+    background-image: linear-gradient($red, $semidark, $dark, $dark)
+
+//--------------Layouts-end--------------//
+
+//--------------Sections--------------//
+
+#Keyboards, #Mouse, #Headsets
+    display: flex
+    padding: 10% 10%
+    gap: 10%
+
+#keyboard-image, #headsets-img
+    flex: 1
+
+    img
+        width: 50vmin
+        height: 50vmin
+    
+    img:hover
+        transition: ease-in-out 0.3s
+        width: 65vmin
+        height: 65vmin
+
+#keyboard-specs, #mouse-specs, #headsets-specs
+    text-shadow: 0.05vmin 0.05vmin $red
+    color: $white
+    flex: 1
+    display: flex
+    flex-direction: column
+    gap: 5%
+
+    h1
+        font-size: 4vmin
+
+    ul
+        font-size: 2vmin
+        
+.buttons
+    display: flex
+    gap: 5%
+
+    button
+        color: $white
+        font-size: 3vmin
+
+    .order-now
+        padding: 2%
+        background: none
+        border: 0.25vmin solid $red
+        box-shadow: 0.25vmin 0.25vmin $dark
+
+    .order-now:hover
+        cursor: pointer
+        transition: ease-out 0.3s
+        color: $red
+
+    .order-now:active
+        transition: ease-out 0.2s
+        background: $dark
+
+    .more
+        padding: 2%
+        background: none
+        border: 0.25vmin solid rgba(255, 0, 0, 0)
+
+    .more:hover
+        cursor: pointer
+        transition: ease-out 0.3s
+        border: 0.25vmin solid $red
+        box-shadow: 0.25vmin 0.25vmin $dark
+
+    .more:active
+        transition: ease-out 0.2s
+        background: $dark
+//--------------Sections-end--------------//
+
+#mouse-image img
+    width: 45vmin
+    height: 31vmin
+
+#mouse-image img:hover
+    transition: 0.3s ease-in-out
+    width: 50vmin
+    height: 36vmin
+
+//--------------Videos--------------//
+
+#Reviews
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+
+#Reviews .slider
+    top: 2%
+    width: 75vmin
+    height: 50vmin
+
+#Reviews ul
+    width: 50vmin
+    display: flex
+    justify-content: center
+    align-items: center
+    z-index: 20
+    gap: 5%
+
+#Reviews ul li
+    list-style: none
+    cursor: pointer
+
+#Reviews ul li video
+    width: 25vmin
+    transition: all 0.3s
+
+#Reviews ul li video:hover
+    transform: scale(1.1)
+
+//--------------Videos-end--------------//
+
+//--------------Forms--------------//
+
+#Contact form
+    margin-top: 10%
+    color: $white
+    width: 75vmin
+    display: flex
+    flex-direction: column
+    gap: 2%
+
+.labels
+    font-size: 2vmin
+    align-content: flex-start
+    display: flex
+    flex-direction: row
+    justify-content: space-between
+
+.entries
+    display: flex
+    justify-content: space-between
+    gap: 2%
+
+    input
+        width: 100%
+        height: 3vmin
+
+.entries:focus
+    outline: 0.1vmin solid $red
+    box-shadow: 0.15vmin 0.15vmin $red
+
+#submit-div
+    display: flex
+    justify-content: center
+
+#submit
+    font-weight: bold
+    color: $white
+    height: 3vmin
+    background-color: $red
+    width: 50%
+
+#submit:hover
+    transition: 0.3s ease-in-out
+    color: $dark
+    font-weight: bolder
+
+#textarea
+    resize: none
+
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button 
+  -webkit-appearance: none
+  margin: 0
+
+
+input[type=number] 
+  -moz-appearance: textfield
+
+@media screen and ( max-width: 960px )
+    section
+        flex-direction: column
+        align-items: center
+        
+    #keyboard-specs, #mouse-specs, #headsets-specs
+        display: flex
+        flex-direction: column
+        gap: 5%
