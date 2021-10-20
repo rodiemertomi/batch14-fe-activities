@@ -196,13 +196,13 @@ section:nth-child(even) {
   transform: scale(1.1);
 }
 
-#Contact form {
-  margin-top: 10%;
+#form {
+  margin-top: 2vmin;
   color: #f8f8f8;
   width: 75vmin;
   display: flex;
   flex-direction: column;
-  gap: 2%;
+  gap: 1vmin;
 }
 
 .labels {
@@ -266,6 +266,7 @@ input[type=number] {
   section {
     flex-direction: column;
     align-items: center;
+    text-align: center;
   }
 
   #keyboard-specs, #mouse-specs, #headsets-specs {
@@ -311,4 +312,41 @@ footer a{
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
   background: #f8f8f8;
+}
+
+#thankyou{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #f8f8f8;
+  height: 90vh;
+  gap: 10px;
+}
+
+#thankyou h1{
+  font-size: 7vmin;
+}
+
+#thankyou span{  
+  font-size: 7vmin;
+  color: #a01c25;
+}
+
+#thankyou h3{
+  font-size: 3vmin;
+}
+
+#ty-button{
+  font-weight: bold;
+  color: #f8f8f8;
+  height: 3vmin;
+  background-color: #a01c25;
+  width: 10vmin;
+}
+
+#ty-button:hover {
+  transition: 0.3s ease-in-out;
+  color: #1D1D1D;
+  font-weight: bolder;
 }
