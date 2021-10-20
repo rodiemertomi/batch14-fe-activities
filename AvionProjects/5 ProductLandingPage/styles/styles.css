@@ -237,7 +237,7 @@ section:nth-child(even) {
 #submit-div {
   display: flex;
   align-items: center;
-  flex-direction: column
+  flex-direction: column;
 }
 
 #submit {
@@ -275,10 +275,17 @@ input[type=number] {
     text-align: center;
   }
 
+  #Mouse{
+    flex-direction: column-reverse;
+  }
+
   #keyboard-specs, #mouse-specs, #headsets-specs {
     display: flex;
     flex-direction: column;
-    gap: 5%;
+    gap: 3vmin;
+  }
+  #submit{
+    height: 4vmin;
   }
 }
 
