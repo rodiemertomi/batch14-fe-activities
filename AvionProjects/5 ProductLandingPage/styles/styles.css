@@ -196,6 +196,12 @@ section:nth-child(even) {
   transform: scale(1.1);
 }
 
+#Contact{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 #form {
   margin-top: 2vmin;
   color: #f8f8f8;
