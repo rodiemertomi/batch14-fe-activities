@@ -327,6 +327,10 @@ footer a{
   background: #f8f8f8;
 }
 
+
+
+/* SUBMITTED.HTML CSS STYLES */
+
 #thankyou{
   display: flex;
   flex-direction: column;
@@ -363,3 +367,5 @@ footer a{
   color: #1D1D1D;
   font-weight: bolder;
 }
+
+/* SUBMITTED HTML CSS STYLES */
