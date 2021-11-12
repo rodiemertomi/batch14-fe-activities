@@ -1,0 +1,163 @@
+*, *::after, *::before {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}
+
+:root {
+    --cell-size: 15vmin;
+    --mark-size: calc(var(--cell-size) * .9);
+    --dark-side: url(./resources/dark-side.svg);
+}
+
+.board {
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    gap: 1em;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    grid-template-columns: repeat(3, auto);
+    background-image: url('../resources/star-wars-backgrounds-14.jpg');
+}
+
+.cell {
+    width: var(--cell-size);
+    height: var(--cell-size);
+    border: 1px solid whitesmoke;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+}
+
+.cell.dark-side,
+.cell.light-side,
+.cell.disabled {
+    cursor: not-allowed;
+}
+
+/*
+CHOOSE SIDE START
+*/
+
+.choose-side{
+    background-image: url('../resources/asdasd.jpg');
+    background-size: cover;
+    z-index: 999;
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: rgba(0,0,0,0.9);
+    text-align: center;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    color: white;
+    font-size: 5rem;
+}
+
+.choose-side button{
+    height: 100vh;
+    width: 50vw;
+    font-size: 3rem;
+    background-color: rgba(0,0,0,0.5);
+    cursor: pointer;
+    padding: .25em .5em;
+}
+
+.choose-side #choose-side-text{
+    z-index: -1;
+    text-align: center;
+    position: fixed;
+    top: 0;
+}
+
+.choose-side button:hover{
+    color: white;
+    border-color: white;
+}
+
+.choose-side.show{
+    display: flex;
+}
+
+/*
+CHOOSE SIDE END
+*/
+
+
+/*
+DARK SIDE START
+*/
+
+.cell.dark-side::after,
+.board.dark-side .cell:not(.dark-side):not(.light-side):hover::after {
+    content: url('../resources/darth_vader_icon.png');    
+    background-repeat: no-repeat;
+}
+
+/*
+DARK SIDE END
+*/
+
+/*
+LIGHT SIDE START
+*/
+.cell.light-side::after,
+.board.light-side .cell:not(.dark-side):not(.light-side):hover::after {
+    content: url('../resources/obi_wan_kenobi_icon.png');    
+    background-repeat: no-repeat;
+}
+
+
+/*
+LIGHT SIDE END
+*/
+
+
+/*
+WINNING MESSAGE START
+*/
+.winning-message{
+    display: none;
+    position: fixed;
+    background-color: rgba(0,0,0,0.9);
+    text-align: center;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    color: white;
+    font-size: 5rem;
+}
+
+#restartButton{
+    color: white;
+    font-size: 2rem;
+    background-color: black;
+    border: 1px solid white;
+    cursor: pointer;
+    padding: .25em .5em;
+}
+
+#restartButton:hover{
+    background-color: white;
+    color: black;
+    border-color: black;
+}
+
+.winning-message.show{
+    display: flex;
+}
+/*
+WINNING MESSAGE END
+*/

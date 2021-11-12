@@ -1,0 +1,355 @@
+@use '../sass' as *
+
+body
+    margin: 0
+    padding: 0
+    background: url('images/1.jpg')
+    background-size: contain
+    background-repeat: no-repeat
+
+.front
+    width: 100vw
+    height: 100vh
+    display: flex
+    justify-content: center
+    align-items: center
+
+.left
+    height: 100vh
+    color: $white
+    background-color: $opacity1
+    font-size: 6vh
+
+.left
+    flex: 1
+    display: flex
+    flex-direction: column
+    align-content: space-around
+    justify-content: space-around
+    align-items: center
+
+.wrapper
+    width: 380px
+    position: relative
+    background: $opacity2
+    border-radius: 15px
+    padding: 25px 30px
+    box-shadow: 0px 6px 15px $white
+    text-shadow: 1px 1px 1px $white
+
+    i
+        cursor: pointer
+
+.top-bar, .progress-area .song-timer,
+.controls, .music-list .header, .music-list ul li
+    display: flex
+    align-items: center
+    justify-content: space-between
+
+    i
+        font-size: 30px
+
+    span
+        font-size: 18px
+        margin-left: -3px
+
+.top-bar i:first-child
+    margin-left: -7px
+
+.song-details
+    text-align: center
+    margin: 30px 0
+
+    .name
+        font-size: 21px
+
+    .artist
+        font-size: 16px
+
+.progress-area
+    height: 6px
+    width: 100%
+    background: $opacity1
+    border-radius: 50px
+    cursor: pointer
+
+    .progress-bar
+        height: inherit
+        width: 0%
+        position: relative
+        border-radius: inherit
+        background: $gradient
+
+    .song-timer
+        margin-top: 2px
+
+        span
+            font-size: 13px
+
+.controls
+    margin-top: 10px
+    
+    i
+        font-size: 28px
+        user-select: none
+        background: $gradient
+        background-clip: text
+        -webkit-background-clip: text
+        -webkit-text-fill-color: transparent
+
+    #prev
+        margin-right: -13px
+
+    #next
+        margin-right: -13px
+    
+    .play-pause
+        height: 54px
+        width: 54px
+        background: $gradient2
+        box-shadow: 0px 0px 5px $white
+        border-radius: 50%
+        display: flex
+        align-items: center
+        justify-content: center
+
+.play-pause::before
+    content: ""
+    position: absolute
+    height: 43px
+    width: 43px
+    border-radius: inherit
+    background: $gradient
+
+.play-pause i
+    height: 43px
+    width: 43px
+    line-height: 43px
+    text-align: center
+    background: inherit
+    background-clip: text
+    position: absolute
+    border-radius: inherit
+    -webkit-background-clip: text
+    -webkit-text-fill-color: transparent
+
+.controls i:nth-child(2),
+.controls i:nth-child(4)
+    font-size: 43px
+
+.music-list
+    position: absolute
+    background: $opacity2
+    width: 86%
+    top: -55%
+    left: 0
+    opacity: 0
+    pointer-events: none
+    z-index: 5
+    padding: 15px 30px
+    border-radius: 15px
+    box-shadow: 0px -5px 10px $white
+    transition: all 0.15s ease-out
+
+.music-list.show
+    bottom: 0
+    opacity: 1
+    pointer-events: auto
+
+.header .row
+    display: flex
+    align-items: center
+    font-size: 19px
+    color: $white
+
+.header .row i
+    cursor: default
+
+.header .row span
+    margin-left: 5px
+    
+.header #close
+    font-size: 22px
+    color: $black
+
+.music-list ul
+    margin: 10px 0
+    max-height: 260px
+    overflow: auto
+
+.music-list ul::-webkit-scrollbar
+    width: 0px
+
+.music-list ul li
+    list-style: none
+    display: flex
+    cursor: pointer
+    padding-bottom: 10px
+    margin-bottom: 5px
+    border-bottom: 1px solid #white
+
+.music-list ul li:last-child
+    border-bottom: 0px
+
+.music-list ul li .row span
+    font-size: 17px
+
+.music-list ul li .row p
+    opacity: 0.9
+
+ul li .audio-duration
+    font-size: 16px
+
+ul li.playing
+    pointer-events: none
+
+.calendar, .music
+    margin: 3vmin 0 0 3vmin
+
+.left .calendar    
+    font-family: 'One Piece', sans-serif
+    text-shadow: 5px 5px 1px $black
+    flex: 2
+
+    #third-line
+        font-size: 10vmin
+
+.left .music
+    color: $white
+    flex: 1
+    font-size: large
+
+.middle
+    flex: 3
+    display: flex
+    flex-flow: column wrap
+    align-content: center
+    justify-content: space-between
+    height: 100vh
+    color: $white
+    background-color: $opacity1
+    text-align: center
+
+    .greeting    
+        font-family: 'One Piece', sans-serif
+        margin-top: 2%
+
+        h1
+            text-shadow: 5px 5px 1px $black
+        
+        #name
+            box-shadow: 0px 6px 15px $white
+            text-align: center
+            border-radius: 50px
+            background: $opacity3
+            border-bottom: 2px solid $black
+            height: 5vmin
+            font-size: 3vmin
+            width: 80%
+            border-style: hidden
+            border-bottom-style: groove
+
+        .set-sail
+            box-shadow: 0px 6px 15px $white
+            letter-spacing: 10px
+            color: $white
+            font-family: 'One piece', sans-serif
+            margin-top: 5%
+            width: 25vmin
+            height: 5vmin
+            border-radius: 50px
+            background: $opacity2
+
+    .main-focus
+        font-family: 'One Piece', sans-serif
+        opacity: 0
+        margin-bottom: 10%
+
+        #mainFocus
+            box-shadow: 0px 6px 15px $white
+            text-align: center
+            border-radius: 50px
+            background: $opacity3
+            border-bottom: 2px solid $black
+            height: 5vmin
+            font-size: 3vmin
+            width: 80%
+            border-style: hidden
+            border-bottom-style: groove
+
+        #mainFocus:focus
+            outline: none
+
+        .go
+            box-shadow: 0px 6px 15px $white
+            letter-spacing: 10px
+            color: $white
+            font-family: 'One piece', sans-serif
+            margin-top: 5%
+            width: 25vmin
+            height: 5vmin
+            border-radius: 50px
+            background: $opacity2
+
+#quote, #quotee
+    transition: 0.15s ease-in
+    font-style: italic
+    font-size: 2vw
+    text-shadow: 5px 5px 1px $black
+
+.right
+    flex: 1
+    height: 100vh
+    color: $white
+    background-color: $opacity1
+    display: flex
+    justify-content: center      
+
+.todo-container
+    display: flex
+    flex-direction: column
+    gap: 1vmin
+
+    h1
+        font-family: 'One Piece', sans-serif        
+        text-shadow: 5px 5px 1px $black
+        font-size: 5vmin
+
+    .input-container
+        display: flex
+        justify-content: space-between
+
+        #inputField
+            background: $opacity2
+            box-shadow: 0px 6px 15px $white
+            border: 1px solid $black
+            height: 3vmin
+            width: 80%
+
+        #addToDo
+            box-shadow: 0px 6px 15px $white
+            background: $blue
+            color: $white
+            font-size: 2vmin
+            text-align: center
+            vertical-align: center
+
+    .to-dos
+        text-shadow: 5px 5px 1px $black
+        flex-direction: column
+        align-items: center
+        font-size: 2vmin
+        height: 50vh
+        width: 25vh
+
+        p
+            word-break: break-all
+            white-space: normal
+
+input, select, textarea
+    color: $white
+
+.paragraph-styling
+    margin: 0
+    cursor: pointer
+    font-size: 2vmin
