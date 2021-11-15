@@ -152,6 +152,7 @@ function previous(){
     })
     pointer -= 1
     let nextMove = history[pointer]
+    console.log(nextMove)
     for(let i = nextMove.length; i>=0; i--){
         if(nextMove[i] === 'X'){
             cells[i].classList.add(darkSide)
