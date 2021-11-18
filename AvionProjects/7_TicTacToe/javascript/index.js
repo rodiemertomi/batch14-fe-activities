@@ -21,10 +21,9 @@ const lightSideButton = document.getElementById('lightSideButton')
 const previousButton = document.getElementById('previousButton')
 const nextButton = document.getElementById('nextButton')
 let boardState = new Array(9)
-let history = []
+let moveHistory = []
 let turn
 let pointer = -1
-let isGameEnd
 
 startGame()
 restart.addEventListener('click', restartGame)
@@ -50,6 +49,8 @@ function clicked(e){
     const currentClass = turn ? lightSide : darkSide
     placeMark(cellTarget, currentClass)
     pointer += 1
+    console.log(pointer)
+    console.log(moveHistory)
     checkState()
     if(checkWin(currentClass)){
         endGame(false)
@@ -131,13 +132,18 @@ function checkState(){
         }
     }
     let boardStateCopy = [...boardState]
-    history.push(boardStateCopy)
+    moveHistory.push(boardStateCopy)
 }
 
 function restartGame(){
-    history = []
+    previousButton.disabled = false
+    previousButton.style.cursor = 'pointer'
+    previousButton.classList.remove('disabled')
+    nextButton.disabled = false
+    nextButton.style.cursor = 'pointer'
+    nextButton.classList.remove('disabled')
+    moveHistory.length = 0
     pointer = -1
-    boardState = []
     previousButton.classList.remove('show')
     nextButton.classList.remove('show')
     previousButton.classList.remove('disabled')
@@ -151,8 +157,7 @@ function previous(){
         cell.classList.remove(lightSide)
     })
     pointer -= 1
-    let nextMove = history[pointer]
-    console.log(nextMove)
+    let nextMove = moveHistory[pointer]
     for(let i = nextMove.length; i>=0; i--){
         if(nextMove[i] === 'X'){
             cells[i].classList.add(darkSide)
@@ -169,7 +174,7 @@ function next(){
         cell.classList.remove(lightSide)
     })
     pointer +=1
-    let nextMove = history[pointer]
+    let nextMove = moveHistory[pointer]
     for(let i = 0; i<=nextMove.length; i++){
         if(nextMove[i] === 'X'){
             cells[i].classList.add(darkSide)
@@ -187,7 +192,7 @@ function endState(){
         previousButton.disabled = true
         previousButton.style.cursor = 'not-allowed'
         previousButton.classList.add('disabled')
-    }else if(pointer === history.length-1){
+    }else if(pointer === moveHistory.length-1){
         nextButton.disabled = true
         nextButton.style.cursor = 'not-allowed'
         nextButton.classList.add('disabled')
